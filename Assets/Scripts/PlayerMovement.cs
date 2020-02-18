@@ -6,31 +6,26 @@ public class PlayerMovement : MonoBehaviour {
     // Movement Speed of Player
     public float mvtSpeed;
 
-    // Start is called before the first frame update
-    void Start() {
-        
-    }
-
-    // Update is called once per frame
+    // FixedUpdate is called once per frame
     void FixedUpdate()
     {
-        //If forward movement key "w" is pressed then Vector3 is adjusted in the upwards direction
-        if(Input.GetKey("w"))
+        //If forward movement key "w" is pressed then Vector2 is adjusted in the upwards direction else if "s" is pressed it is adjusted in the negative
+        if (Input.GetKey("w") && !Input.GetKey("s"))
         {
-            transform.position += transform.TransformDirection(Vector3.up) * Time.deltaTime * mvtSpeed;
+            transform.position += transform.TransformDirection(Vector2.up) * Time.deltaTime * mvtSpeed;
         }
-        //If forward movement key "s" is pressed then Vector3 is adjusted in the upwards direction
-        else if (Input.GetKey("s"))
+        else if (!Input.GetKey("w") && Input.GetKey("s"))
         {
-            transform.position -= transform.TransformDirection(Vector3.up) * Time.deltaTime * mvtSpeed;
+            transform.position -= transform.TransformDirection(Vector2.up) * Time.deltaTime * mvtSpeed;
         }
-        //If forward movement key "a" and not "d" is pressed then Vector3 is adjusted in the upwards direction
+
+        //If forward movement key "a" is pressed then Vector2 is adjusted in the left direction else if "d" is pressed it is adjusted in the negative
         if (Input.GetKey("a") && !Input.GetKey("d"))
         {
-            transform.position += transform.TransformDirection(Vector3.left) * Time.deltaTime * mvtSpeed;
+            transform.position += transform.TransformDirection(Vector2.left) * Time.deltaTime * mvtSpeed;
         } else if (!Input.GetKey("a") && Input.GetKey("d"))
         {
-            transform.position -= transform.TransformDirection(Vector3.left) * Time.deltaTime * mvtSpeed;
+            transform.position -= transform.TransformDirection(Vector2.left) * Time.deltaTime * mvtSpeed;
         }
     }
 }
