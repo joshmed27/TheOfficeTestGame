@@ -44,11 +44,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 280992461
-    locked: 0
   - name: Objects
     uniqueID: 1171942841
+    locked: 0
+  - name: Player
+    uniqueID: 280992461
     locked: 0
   - name: Walls
     uniqueID: 4186241497
