@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScreenMenu.unity
     guid: 77064095f7aee49d5bd2b3627ce06a3a
   - enabled: 1
+    path: Assets/Scenes/DayBufferScene.unity
+    guid: 3ac893ffa13b047428a731b726518dac
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 8d94b8f0791ac4cf5b124e2bbc866cf7
   m_configObjects: {}
